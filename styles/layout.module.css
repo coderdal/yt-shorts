@@ -1,0 +1,12 @@
+.app {
+  display: grid;
+  grid-template-columns: 72px repeat(4, 1fr);
+  grid-template-rows: 56px repeat(4, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  height: 100vh;
+}
+
+.main {
+  grid-area: 2 / 2 / 6 / 6;
+}
