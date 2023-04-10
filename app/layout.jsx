@@ -1,7 +1,7 @@
-import "./globals.css";
+import "@/styles/globals.css";
 
-import Header from "./header";
-import NavigationMenu from "./navigationMenu";
+import Header from "@/app/header";
+import NavigationMenu from "@/app/navigationMenu";
 import styles from "@/styles/layout.module.css";
 
 export const metadata = {
