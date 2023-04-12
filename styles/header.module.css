@@ -1,3 +1,42 @@
 .header {
   grid-area: 1 / 1 / 2 / 6;
+  display: flex;
+  align-items: center;
+  padding: 0px 16px;
+}
+
+.appLogo {
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+
+.menuButton {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  border-radius: 50%;
+  transition: 200ms background ease-out;
+  color: var(--text-color);
+}
+
+.menuButton:hover {
+  background: var(--gray-color);
+}
+
+.logo {
+  padding: 16px 10px 16px 16px;
+}
+
+.image {
+  height: 20px;
+  color: var(--text-color);
+}
+
+.link {
+  color: var(--text-color);
 }
