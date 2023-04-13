@@ -4,6 +4,8 @@ import styles from "@/styles/header.module.css";
 import { CgMenu, CgProfile } from "react-icons/cg";
 import { RiVideoAddLine } from "react-icons/ri";
 import { IoMdNotificationsOutline } from "react-icons/io";
+import { FaMicrophone } from "react-icons/fa";
+import { TfiSearch } from "react-icons/tfi";
 
 import Logo from "@/app/logo.jsx";
 
@@ -20,17 +22,33 @@ export default function Header() {
         <div className={styles.logo}>
           <div className={styles.image}>
             <Link href={"/"} className={styles.link}>
-              <Logo />
+              <Logo size={23} />
             </Link>
           </div>
         </div>
       </div>
 
-      <div className={styles.searchContainer}>search bar</div>
+      <div className={styles.searchContainer}>
+        <div className={styles.searchInput}>
+          <input
+            type="text"
+            name="search"
+            id="search"
+            placeholder="Search"
+            className={styles.input}
+          />
+          <button className={styles.searchBtn}>
+            <TfiSearch size={22} />
+          </button>
+        </div>
+        <button className={styles.voiceSearchBtn}>
+          <FaMicrophone size={20} />
+        </button>
+      </div>
 
       <div className={styles.actions}>
         <button className={styles.action}>
-          <RiVideoAddLine size={24} />
+          <RiVideoAddLine size={23} />
         </button>
         <button className={styles.action}>
           <IoMdNotificationsOutline size={24} />
