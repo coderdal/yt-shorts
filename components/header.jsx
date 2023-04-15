@@ -7,7 +7,7 @@ import { IoMdNotificationsOutline } from "react-icons/io";
 import { FaMicrophone } from "react-icons/fa";
 import { TfiSearch } from "react-icons/tfi";
 
-import Logo from "@/app/logo.jsx";
+import Logo from "@/components/logo.jsx";
 
 import Link from "next/link";
 
