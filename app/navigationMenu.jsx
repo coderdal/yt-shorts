@@ -19,10 +19,7 @@ export default function NavigationMenu() {
           <CgHome size={22} />
           <span>Home</span>
         </li>
-        <li className={styles.item}>
-          <BiMovie size={22} />
-          <span>Shorts</span>
-        </li>
+
         <li className={styles.item}>
           <MdOutlineSubscriptions size={22} />
           <span>Subscriptions</span>
