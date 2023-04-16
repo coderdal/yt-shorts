@@ -1,0 +1,45 @@
+.root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.videoContainer {
+  height: 560px;
+  width: 320px;
+  margin-right: 16px;
+}
+
+.video {
+  height: 100%;
+  width: 100%;
+  border-radius: 14px;
+}
+
+.videoActions {
+  max-height: 560px;
+  max-width: 320px;
+  height: 100%;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+}
+
+.soundImage {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  cursor: pointer;
+}
