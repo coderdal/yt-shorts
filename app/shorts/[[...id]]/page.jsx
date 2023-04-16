@@ -3,6 +3,11 @@ import styles from "@/styles/player.module.css";
 
 import Image from "next/image";
 
+import { HiOutlineDotsHorizontal } from "react-icons/hi";
+import { IoIosShareAlt } from "react-icons/io";
+import { MdComment } from "react-icons/md";
+import { AiFillDislike, AiFillLike } from "react-icons/ai";
+
 function Home() {
   return (
     <main className={styles.root}>
@@ -22,8 +27,40 @@ function Home() {
               className={styles.soundImage}
             />
           </div>
-          <div>2</div>
-          <div>3</div>
+
+          <div className={styles.action}>
+            <button className={styles.actionButton}>
+              <HiOutlineDotsHorizontal />
+            </button>
+          </div>
+
+          <div className={styles.action}>
+            <button className={styles.actionButton}>
+              <IoIosShareAlt />
+            </button>
+            <span className={styles.actionText}>Share</span>
+          </div>
+
+          <div className={styles.action}>
+            <button className={styles.actionButton}>
+              <MdComment />
+            </button>
+            <span className={styles.actionText}>36</span>
+          </div>
+
+          <div className={styles.action}>
+            <button className={styles.actionButton}>
+              <AiFillDislike className={styles.actionReverse} />
+            </button>
+            <span className={styles.actionText}>Dislike</span>
+          </div>
+
+          <div className={styles.action}>
+            <button className={styles.actionButton}>
+              <AiFillLike />
+            </button>
+            <span className={styles.actionText}>190</span>
+          </div>
         </div>
       </div>
     </main>
