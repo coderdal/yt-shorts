@@ -33,7 +33,7 @@ function Home() {
               </div>
             </div>
           </div>
-          <video className={styles.video} loop="true" autoplay="autoplay" muted>
+          <video className={styles.video} loop={true} autoPlay={true} muted>
             <source src="/videos/pexels-pavel-danilyuk-5495899-1080x1920-30fps.mp4" />
           </video>
         </div>

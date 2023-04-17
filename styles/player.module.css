@@ -84,16 +84,20 @@
 
 .videoLayer {
   position: absolute;
-  bottom: 0;
-  left: 0;
+  height: 100%;
+  width: 100%;
   z-index: 10;
 }
 
 .videoDetails {
+  position: absolute;
+  bottom: 0;
+  left: 0;
   display: flex;
   flex-direction: column;
-  padding: 0px 16px 0px 20px;
+  padding: 0px 16px 8px 20px;
   pointer-events: none;
+  z-index: 999999999;
 }
 
 .description {
