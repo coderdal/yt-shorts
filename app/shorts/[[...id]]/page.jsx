@@ -13,6 +13,9 @@ function Home() {
     <main className={styles.root}>
       <div className={styles.container}>
         <div className={styles.videoContainer}>
+          <div className={styles.videoDetails}>
+            <p className={styles.description}>testtesttest</p>
+          </div>
           <video className={styles.video} loop="true" autoplay="autoplay" muted>
             <source src="/videos/pexels-pavel-danilyuk-5495899-1080x1920-30fps.mp4" />
           </video>

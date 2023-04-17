@@ -19,6 +19,7 @@
   height: 560px;
   width: 320px;
   margin-right: 16px;
+  position: relative;
 }
 
 .video {
@@ -79,4 +80,10 @@
   height: 40px;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.videoDetails {
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
