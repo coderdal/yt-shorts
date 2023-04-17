@@ -29,6 +29,7 @@ function Home() {
                   />
                   <span className={styles.nameText}>@CodErdal</span>
                 </div>
+                <div className={styles.subscribe}>Subscribe</div>
               </div>
             </div>
           </div>

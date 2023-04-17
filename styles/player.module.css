@@ -86,12 +86,14 @@
   position: absolute;
   bottom: 0;
   left: 0;
+  z-index: 10;
 }
 
 .videoDetails {
   display: flex;
   flex-direction: column;
-  padding: 0px 0px 0px 20px;
+  padding: 0px 16px 0px 20px;
+  pointer-events: none;
 }
 
 .description {
@@ -109,6 +111,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
 }
 
 .nameText {
@@ -120,4 +123,13 @@
   width: 38px;
   height: 38px;
   border-radius: 50%;
+}
+
+.subscribe {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  background: var(--text-color);
+  color: var(--bg-color);
+  cursor: pointer;
 }
