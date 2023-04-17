@@ -82,8 +82,42 @@
   cursor: pointer;
 }
 
-.videoDetails {
+.videoLayer {
   position: absolute;
   bottom: 0;
   left: 0;
+}
+
+.videoDetails {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 0px 0px 20px;
+}
+
+.description {
+  margin-bottom: 16px;
+}
+
+.channel {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.channelName {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nameText {
+  margin-left: 8px;
+  font-weight: 600;
+}
+
+.channelLogo {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
 }

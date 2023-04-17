@@ -13,8 +13,24 @@ function Home() {
     <main className={styles.root}>
       <div className={styles.container}>
         <div className={styles.videoContainer}>
-          <div className={styles.videoDetails}>
-            <p className={styles.description}>testtesttest</p>
+          <div className={styles.videoLayer}>
+            <div className={styles.videoDetails}>
+              <p className={styles.description}>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+              <div className={styles.channel}>
+                <div className={styles.channelName}>
+                  <Image
+                    src="/images/logo.jpg"
+                    width={24}
+                    height={24}
+                    alt="channel logo"
+                    className={styles.channelLogo}
+                  />
+                  <span className={styles.nameText}>@CodErdal</span>
+                </div>
+              </div>
+            </div>
           </div>
           <video className={styles.video} loop="true" autoplay="autoplay" muted>
             <source src="/videos/pexels-pavel-danilyuk-5495899-1080x1920-30fps.mp4" />
