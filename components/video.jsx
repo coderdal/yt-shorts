@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import styles from "@/styles/player.module.css";
 
@@ -6,25 +6,63 @@ import Image from "next/image";
 
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
 import { IoIosShareAlt } from "react-icons/io";
-import { MdComment, MdVolumeUp } from "react-icons/md";
+import { MdComment, MdVolumeUp, MdVolumeOff } from "react-icons/md";
 import { AiFillDislike, AiFillLike } from "react-icons/ai";
 import { FaPlay, FaPause } from "react-icons/fa";
 
 export default function Video({ details }) {
+  const videoRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [isMuted, setIsMuted] = useState(false);
+
+  const toggleVideo = () => {
+    if (isPlaying) {
+      videoRef.current.pause();
+      setIsPlaying(false);
+    } else {
+      videoRef.current.play();
+      setIsPlaying(true);
+    }
+  };
+
+  const toggleSound = () => {
+    if (isMuted) {
+      videoRef.current.muted = true;
+      setIsMuted(false);
+    } else {
+      videoRef.current.muted = false;
+      setIsMuted(true);
+    }
+  };
+
+  useEffect(() => {
+    toggleVideo();
+  }, []);
+
   return (
     <div className={styles.container}>
       <div className={styles.videoContainer}>
         <div className={styles.videoLayer}>
           <div className={styles.videoControls}>
-            <button className={styles.button}>
-              <FaPlay />
-            </button>
-            {/* <button className={styles.button}>
-          <FaPause />
-        </button> */}
-            <button className={styles.button}>
-              <MdVolumeUp size={22} />
-            </button>
+            {isPlaying ? (
+              <button className={styles.button} onClick={toggleVideo}>
+                <FaPause />
+              </button>
+            ) : (
+              <button className={styles.button} onClick={toggleVideo}>
+                <FaPlay />
+              </button>
+            )}
+
+            {isMuted ? (
+              <button className={styles.button} onClick={toggleSound}>
+                <MdVolumeUp size={22} />
+              </button>
+            ) : (
+              <button className={styles.button} onClick={toggleSound}>
+                <MdVolumeOff size={22} />
+              </button>
+            )}
           </div>
           <div className={styles.videoDetails}>
             <p className={styles.description}>{details.videoDesc}</p>
@@ -43,7 +81,7 @@ export default function Video({ details }) {
             </div>
           </div>
         </div>
-        <video className={styles.video} loop={true} autoPlay={true} muted>
+        <video className={styles.video} loop={true} muted ref={videoRef}>
           <source src={details.videoSrc} />
         </video>
       </div>
