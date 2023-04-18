@@ -5,8 +5,9 @@ import Image from "next/image";
 
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
 import { IoIosShareAlt } from "react-icons/io";
-import { MdComment } from "react-icons/md";
+import { MdComment, MdVolumeUp } from "react-icons/md";
 import { AiFillDislike, AiFillLike } from "react-icons/ai";
+import { FaPlay, FaPause } from "react-icons/fa";
 
 function Home() {
   return (
@@ -14,6 +15,17 @@ function Home() {
       <div className={styles.container}>
         <div className={styles.videoContainer}>
           <div className={styles.videoLayer}>
+            <div className={styles.videoControls}>
+              <button className={styles.button}>
+                <FaPlay />
+              </button>
+              {/* <button className={styles.button}>
+                <FaPause />
+              </button> */}
+              <button className={styles.button}>
+                <MdVolumeUp size={22} />
+              </button>
+            </div>
             <div className={styles.videoDetails}>
               <p className={styles.description}>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
