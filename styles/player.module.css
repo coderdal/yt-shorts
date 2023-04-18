@@ -15,6 +15,11 @@
   height: 100%;
 }
 
+.videoList {
+  height: 100vh;
+  overflow: hidden;
+}
+
 .videoContainer {
   height: 560px;
   width: 320px;
